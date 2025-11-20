@@ -65,4 +65,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+Console.WriteLine(app.Services.GetService<ISecretsService>()?.AIAssistantSecrets?.EndPoint);
+Console.WriteLine(app.Services.GetService<ISecretsService>()?.AIAssistantSecrets?.Key);
+Console.WriteLine(app.Services.GetService<ISecretsService>()?.AIAssistantSecrets?.Id);
+Console.WriteLine(app.Services.GetService<ISecretsService>()?.IoTHubSecrets?.ConnectionString);
+Console.WriteLine(app.Services.GetService<IAppConfigurationsService>()?.KeyVaultName);
+Console.WriteLine(app.Services.GetService<IAppConfigurationsService>()?.SecretsPrefix);
+Console.WriteLine(app.Services.GetService<IAppConfigurationsService>()?.IoTDeviceName);
+
 app.Run();
