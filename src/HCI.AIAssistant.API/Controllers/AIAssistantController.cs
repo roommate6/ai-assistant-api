@@ -22,7 +22,7 @@ public class AIAssistantController : ControllerBase
         _parametricFunctions = parametricFunctions;
     }
 
-    [HttpPost("/message")]
+    [HttpPost("message")]
     [ProducesResponseType(typeof(AIAssistantControllerPostMessageResponseDTO), 200)]
     [ProducesResponseType(typeof(ErrorResponseDTO), 400)]
     public async Task<ActionResult> PostMessage([FromBody] AIAssistantControllerPostMessageRequestDTO request)
